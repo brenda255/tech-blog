@@ -12,6 +12,13 @@ router.get('/', async (req, res) => {
           attributes: ['name'],
         },
       ],
+        include: [
+          {
+            model: Comment,
+            attributes: ['comment_text'],
+          },
+        ],
+  
     });
 
     // Serialize data so the template can read it
@@ -36,6 +43,13 @@ router.get('/post/:id', async (req, res) => {
           attributes: ['name'],
         },
       ],
+      include: [
+        {
+          model: Comment,
+          attributes: ['comment_text'],
+        },
+      ],
+
     });
 
     const post = postData.get({ plain: true });
