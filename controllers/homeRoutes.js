@@ -12,12 +12,12 @@ router.get('/', async (req, res) => {
           attributes: ['name'],
         },
       ],
-        include: [
-          {
-            model: Comment,
-            attributes: ['comment_text'],
-          },
-        ],
+        // include: [
+        //   {
+        //     model: Comment,
+        //     attributes: ['comment_text'],
+        //   },
+        // ],
   
     });
 
@@ -43,12 +43,12 @@ router.get('/post/:id', async (req, res) => {
           attributes: ['name'],
         },
       ],
-      include: [
-        {
-          model: Comment,
-          attributes: ['comment_text'],
-        },
-      ],
+      // include: [
+      //   {
+      //     model: Comment,
+      //     attributes: ['comment_text'],
+      //   },
+      // ],
 
     });
 
