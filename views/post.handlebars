@@ -1,0 +1,13 @@
+<div class="text-center">
+  <h2>{{name}}</h2>
+  <p>{{{get_emoji}}}</p>
+  <p>{{description}}</p>
+  <p>Created by {{user.name}} on {{format_date date_created}}</p>
+  <p>
+    <button class="btn btn-primary" id = "edit-btn">Edit this Post!</button>
+    <button class="btn btn-primary" data-post={{id}}  id="comment-btn">Comment on this Post!</button>
+  </p>
+  <input type="text" name="comment" id="comment">
+</div>
+
+<script src="/js/post.js"></script>
